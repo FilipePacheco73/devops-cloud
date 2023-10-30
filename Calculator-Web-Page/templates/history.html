@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator History</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Calculator History</h1>
+    
+    <table>
+        <tr>
+            <th>Num1</th>
+            <th>Num2</th>
+            <th>Operation</th>
+            <th>Result</th>
+        </tr>
+        {% for row in results %}
+        <tr>
+            <td>{{ row.Num1 }}</td>
+            <td>{{ row.Num2 }}</td>
+            <td>{{ row.Operation }}</td>
+            <td>{{ row.Result }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/">Back to Calculator</a>
+</body>
+</html>
